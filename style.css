@@ -1,0 +1,131 @@
+ 
+ :root {
+    --primaryColor: #6d28d9;
+    --secondaryColor: #ede9fe;
+    --mainWhite: #fff;
+    --mainBlack: #222;
+    --mainGrey: #7c7c7c;
+    --mainspacing: 0.1rem;
+    --mainTransition: all 0.3s linear;
+    --mainRed: #db2777;
+    --bodyColor: #f6f6f6;
+ }
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ body {
+    color: var(--mainBlack);
+    background-color: var(--mainWhite);
+    background-color: var(--bodyColor);
+    position: relative;
+ }
+
+ .header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 170px;
+    background-color: var(--secondaryColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10;
+    padding-bottom: 1rem;
+ }
+
+
+ #search {
+   border: none;
+   outline: none;
+   border-radius: 5px;
+   padding: 10px 20px;
+   font-weight: bold;
+   width: 20rem;
+ }
+
+ #search:focus {
+   border: 2px solid var(--primaryColor);
+ }
+
+ .filter-box {
+   display: flex;
+   justify-content: space-around;
+   width: 50%;
+
+ }
+
+ .filter-box a{
+   display: block;
+   text-decoration: none;
+   color: var(--primaryColor);
+   border: 1px solid var(--primaryColor);
+   font-weight: bold;
+   border-radius: 5px;
+   padding: 5px 10px;
+ }
+
+ .filter-box a:hover {
+   background-color: var(--primaryColor);
+   color: var(--secondaryColor);
+ }
+
+
+ .active {
+  background-color: var(--primaryColor);
+  color: var(--secondaryColor) !important;
+ }
+
+
+.section-title h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 5rem;
+  text-transform: capitalize;
+  letter-spacing: var(--mainspacing);
+}
+
+.products-center {
+  padding: 4rem 0;
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap:30px;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  border-radius: 8px;
+ background-color: #fff; 
+  background-size: cover;
+  padding: 1.5rem;
+  gap:20px;
+}
+
+.product-title {
+  color: var(--mainBlack);
+  font: bold;
+  font-size: 1rem;
+}
+.product-price {
+  color: var(--primaryColor);
+}
+
+@media (max-width: 767px) {
+.products-center {
+  flex-direction: column;
+}
+}
+
+
+
